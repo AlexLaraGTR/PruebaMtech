@@ -1,0 +1,104 @@
+.top-client-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(14px);
+  color: #000000;
+
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+
+    .date-group {
+      display: flex;
+      flex-direction: column;
+      label {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+      }
+
+      input[type="date"] {
+        background: rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        color: rgb(0, 0, 0);
+        outline: none;
+        font-size: 0.95rem;
+      }
+    }
+
+    .filter-button {
+      padding: 0.6rem 1.2rem;
+      background: #00e5ff;
+      color: #141e30;
+      font-weight: 600;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: #00bcd4;
+      }
+    }
+  }
+
+  .status {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1rem;
+
+    &.error {
+      color: #ff5252;
+    }
+  }
+
+  .client-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    thead {
+      background: rgba(0, 0, 0, 1);
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+    }
+
+    tbody tr {
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
+    }
+
+    th {
+      font-weight: 600;
+      color: #00e5ff;
+    }
+
+    td {
+      color: #000000;
+    }
+  }
+}

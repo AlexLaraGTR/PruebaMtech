@@ -1,0 +1,63 @@
+<div class="productos-card">
+  <p class="section-subtitle">Productos papu</p>
+
+  <div class="status" *ngIf="cargando">Cargando...</div>
+
+  <form (ngSubmit)="mostrarResumen()" *ngIf="!cargando && productos.length > 0 && !resumenVisible" class="order-form">
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Cantidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productos">
+          <td>{{ producto.nombre }}</td>
+          <td>{{ producto.precio | currency: 'USD':'symbol':'1.2-2' }}</td>
+          <td>{{ producto.stock }}</td>
+          <td>
+            <input
+              type="number"
+              [(ngModel)]="producto.cantidadSeleccionada"
+              name="cantidad_{{ producto.id }}"
+              min="0"
+              [max]="producto.stock"
+              [disabled]="producto.stock === 0"
+              class="input-qty"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="client-select-wrapper">
+      <label for="clienteSelect">Seleccionar Cliente:</label>
+      <select id="clienteSelect" [(ngModel)]="clienteSeleccionado" name="clienteSeleccionado" required>
+        <option *ngFor="let cliente of clientes" [value]="cliente.id">
+          {{ cliente.nombre }} ({{ cliente.email }})
+        </option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn-primary">Revisar Orden</button>
+  </form>
+
+  <!-- Resumen de la orden -->
+  <div *ngIf="resumenVisible" class="order-summary">
+    <h3>Resumen de la Orden</h3>
+    <ul>
+      <li *ngFor="let producto of productosFiltrados()">
+        {{ producto.nombre }} - Cantidad: {{ producto.cantidadSeleccionada }} - 
+        Subtotal: {{ producto.precio * producto.cantidadSeleccionada | currency: 'USD':'symbol':'1.2-2' }}
+      </li>
+    </ul>
+    <p><strong>Total:</strong> {{ calcularTotal() | currency: 'USD':'symbol':'1.2-2' }}</p>
+    <p><strong>Cliente:</strong> {{ obtenerClienteNombre(clienteSeleccionado) }}</p>
+
+    <button (click)="crearOrden()" class="btn-primary">Confirmar Orden</button>
+    <button (click)="resumenVisible = false" class="btn-secondary">Volver</button>
+  </div>
+</div>

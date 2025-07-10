@@ -1,0 +1,35 @@
+<div class="top-client-card">
+  <h2 class="section-title">Top Clientes</h2>
+
+  <div class="filter-row">
+    <div class="date-group">
+      <label for="desde">Desde:</label>
+      <input type="date" id="desde" [(ngModel)]="fechaDesde" />
+    </div>
+
+    <div class="date-group">
+      <label for="hasta">Hasta:</label>
+      <input type="date" id="hasta" [(ngModel)]="fechaHasta" />
+    </div>
+
+    <button class="filter-button" (click)="cargarClientes()">Filtrar</button>
+  </div>
+
+  <div class="status" *ngIf="cargando">Cargando...</div>
+  <div class="status error" *ngIf="error">{{ error }}</div>
+
+  <table class="client-table" *ngIf="!cargando && clientes.length > 0">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Total Gastado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <td>{{ cliente.cliente }}</td>
+        <td>{{ cliente.totalGastado | currency: 'USD':'symbol':'1.2-2' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
