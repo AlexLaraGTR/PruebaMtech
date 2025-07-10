@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/3Ix0zlXPfA=",
+  "dgSpecHash": "/4Z7u0C6Nz0=",
   "success": true,
-  "projectFilePath": "E:\\PruebaMtech\\OrdenesApi\\OrdenesAPI.csproj",
+  "projectFilePath": "E:\\PruebaMtech\\OrdenesAPI\\OrdenesAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cobra\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\cobra\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.7\\microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",

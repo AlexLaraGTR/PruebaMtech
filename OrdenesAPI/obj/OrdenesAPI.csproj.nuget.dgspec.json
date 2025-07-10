@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\PruebaMtech\\OrdenesApi\\OrdenesAPI.csproj": {}
+    "E:\\PruebaMtech\\OrdenesAPI\\OrdenesAPI.csproj": {}
   },
   "projects": {
-    "E:\\PruebaMtech\\OrdenesApi\\OrdenesAPI.csproj": {
+    "E:\\PruebaMtech\\OrdenesAPI\\OrdenesAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PruebaMtech\\OrdenesApi\\OrdenesAPI.csproj",
+        "projectUniqueName": "E:\\PruebaMtech\\OrdenesAPI\\OrdenesAPI.csproj",
         "projectName": "OrdenesAPI",
-        "projectPath": "E:\\PruebaMtech\\OrdenesApi\\OrdenesAPI.csproj",
+        "projectPath": "E:\\PruebaMtech\\OrdenesAPI\\OrdenesAPI.csproj",
         "packagesPath": "C:\\Users\\cobra\\.nuget\\packages\\",
-        "outputPath": "E:\\PruebaMtech\\OrdenesApi\\obj\\",
+        "outputPath": "E:\\PruebaMtech\\OrdenesAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cobra\\AppData\\Roaming\\NuGet\\NuGet.Config"
