@@ -1,0 +1,6 @@
+@MTech.OrdenesApi_HostAddress = http://localhost:5048
+
+GET {{MTech.OrdenesApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
